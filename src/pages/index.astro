@@ -6,6 +6,7 @@ import Card from '../components/Card.astro';
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1>The owls are not what they seem...</h1>
+		<h2>Ask my log anything</h2>
 	</main>
 </Layout>
 
@@ -13,8 +14,10 @@ import Card from '../components/Card.astro';
 	main {
 			color: white;
 			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			height: 100vh;
-			place-items: center;
 			width: 100vw;
 	}
 	h1 {
@@ -22,7 +25,5 @@ import Card from '../components/Card.astro';
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
-		margin-bottom: 1em;
-		margin-inline: auto;
 	}
 </style>
