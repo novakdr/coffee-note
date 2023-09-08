@@ -1,16 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+
+const primaryColor = "#FAC9B8";
+const secondaryColor = "#C9F299";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>The owls are not what they seem...</h1>
+		<h1>The owls are not what they <span>seem</span>...</h1>
 		<h2>Ask my log anything</h2>
 	</main>
 </Layout>
 
-<style>
+<style lang="scss" define:vars={{primaryColor, secondaryColor}}>
 	main {
 			color: white;
 			display: flex;
@@ -20,10 +22,15 @@ import Card from '../components/Card.astro';
 			height: 100vh;
 			width: 100vw;
 	}
+
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
+
+		span {
+			color: var(--secondaryColor);
+		}
 	}
 </style>
